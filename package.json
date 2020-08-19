@@ -1,0 +1,23 @@
+{
+  "name": "rates",
+  "version": "1.0.0",
+  "description": "on-chain storage of dash retail rates",
+  "main": "add-rate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashmachine/rates.git"
+  },
+  "author": "cloudwheels",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dashmachine/rates/issues"
+  },
+  "homepage": "https://github.com/dashmachine/rates#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dash": "^3.14.1"
+  }
+}
