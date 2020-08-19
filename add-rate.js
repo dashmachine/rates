@@ -6,7 +6,7 @@ const clientOpts = {
   network: 'evonet',
   apps: {
     ratesContract: {
-      contractId: '4Wow2p4fB6LBTNXNoHMSaWYnLNirgDHwWFzhTYr2XKE3'
+      contractId: '5tAisM4pvefkDwHeaTj84FYB3JyPqUt8rXBRWgP14SWj'
     }
   },
   wallet: {

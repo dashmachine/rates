@@ -1,4 +1,4 @@
-//v0.14 id = 'GPzzTZsRmgfdYivHKGcSxxL8aksCxmrhHVthYGY4urDa'
+//v0.14 id = '5tAisM4pvefkDwHeaTj84FYB3JyPqUt8rXBRWgP14SWj'
 
 const Dash = require('dash');
 const secrets =require('./secrets.js');
@@ -29,7 +29,8 @@ const registerContract = async function () {
             type: "string"
           },
           retrieved: {
-            type: "string"
+            type: "string",
+            maxLength: 30
           },
           source: {
             type: "string",
@@ -59,6 +60,12 @@ const registerContract = async function () {
           {
             "properties": [
               { "symbol": "asc" }
+            ], 
+            "unique": false
+          },
+          {
+            "properties": [
+              { "retrieved": "desc" }
             ], 
             "unique": false
           }
