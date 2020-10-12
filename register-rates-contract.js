@@ -1,4 +1,5 @@
 //v0.14 id = '5tAisM4pvefkDwHeaTj84FYB3JyPqUt8rXBRWgP14SWj'
+//v0.15 id = 'Ceam5k4H9g9zTt1Xn7gzhhKbvoWnNVZMY7N2Ym69RZVQ'
 
 const Dash = require('dash');
 const secrets =require('./secrets.js');
@@ -14,7 +15,7 @@ const client = new Dash.Client(clientOpts);
 const registerContract = async function () {
   try {
     const platform = client.platform;
-    const identity = await platform.identities.get('c6gnBEvVtyWfJ4vz67HGZHfDssNoMeJWDt82yoi128N');
+    const identity = await platform.identities.get('4R6odQPEFrJDt74Jwn7gB67hVCyqQK78fQvY8w8Q3UKg');
     
     const contractDocuments = {
       rate: {

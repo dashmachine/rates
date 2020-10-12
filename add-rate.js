@@ -6,7 +6,7 @@ const clientOpts = {
   network: 'evonet',
   apps: {
     ratesContract: {
-      contractId: '5tAisM4pvefkDwHeaTj84FYB3JyPqUt8rXBRWgP14SWj'
+      contractId: 'Ceam5k4H9g9zTt1Xn7gzhhKbvoWnNVZMY7N2Ym69RZVQ'
     }
   },
   wallet: {
@@ -21,11 +21,13 @@ const submitRateDocument = async function () {
   const platform = client.platform;
 
   try {
-    identity = await platform.identities.get('c6gnBEvVtyWfJ4vz67HGZHfDssNoMeJWDt82yoi128N');
+    identity = await platform.identities.get('4R6odQPEFrJDt74Jwn7gB67hVCyqQK78fQvY8w8Q3UKg');
 
     let response = await axios.get('https://rates2.dashretail.org/rates?source=dashretail&symbol=dashbtc,dashusd,dasheur,dashgbp,dashves,dashngn,dashthb')
     //console.log('got api response:', response);
 
+    /*
+    // sample data  
     const docProperties = {
       "baseCurrency": "DASH",
       "price": 91.0243,
@@ -34,6 +36,7 @@ const submitRateDocument = async function () {
       "source": "dashretail-average",
       "symbol": "DASHUSD"
     }
+    */
 
     const asyncRes = await Promise.all(response.data.map(async (i) => {
       i.price = parseFloat(i.price);
