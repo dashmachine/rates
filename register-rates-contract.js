@@ -1,5 +1,4 @@
-//v0.14 id = '5tAisM4pvefkDwHeaTj84FYB3JyPqUt8rXBRWgP14SWj'
-//v0.15 id = 'Ceam5k4H9g9zTt1Xn7gzhhKbvoWnNVZMY7N2Ym69RZVQ'
+//v0.16 = CeSNCJDJD5qHziBjSGWfvsd8LLeeBzrSrYpvYN5e3Qoy
 
 const Dash = require('dash');
 const secrets =require('./secrets.js');
@@ -15,7 +14,7 @@ const client = new Dash.Client(clientOpts);
 const registerContract = async function () {
   try {
     const platform = client.platform;
-    const identity = await platform.identities.get('4R6odQPEFrJDt74Jwn7gB67hVCyqQK78fQvY8w8Q3UKg');
+    const identity = await platform.identities.get('5Qhw9CyVjzdbDi4PhSTYQf4LHvThRmeVVjPnarmToJEt');
     
     const contractDocuments = {
       rate: {
@@ -83,7 +82,7 @@ const registerContract = async function () {
       console.log("validation passed, broadcasting contract..");
       // Sign and submit the data contract
       await platform.contracts.broadcast(contract, identity);
-      console.log('contract id:', contract.getId());
+      console.log('contract id:', contract.getId().toString());
     } else {
       console.error(validationResult) // An array of detailed validation errors
       throw validationResult.errors[0];

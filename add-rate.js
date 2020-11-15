@@ -6,7 +6,7 @@ const clientOpts = {
   network: 'evonet',
   apps: {
     ratesContract: {
-      contractId: 'Ceam5k4H9g9zTt1Xn7gzhhKbvoWnNVZMY7N2Ym69RZVQ'
+      contractId: 'CeSNCJDJD5qHziBjSGWfvsd8LLeeBzrSrYpvYN5e3Qoy'
     }
   },
   wallet: {
@@ -21,7 +21,7 @@ const submitRateDocument = async function () {
   const platform = client.platform;
 
   try {
-    identity = await platform.identities.get('4R6odQPEFrJDt74Jwn7gB67hVCyqQK78fQvY8w8Q3UKg');
+    identity = await platform.identities.get('5Qhw9CyVjzdbDi4PhSTYQf4LHvThRmeVVjPnarmToJEt');
 
     let response = await axios.get('https://rates2.dashretail.org/rates?source=dashretail&symbol=dashbtc,dashusd,dasheur,dashgbp,dashves,dashngn,dashthb')
     //console.log('got api response:', response);
